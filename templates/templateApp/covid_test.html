@@ -1,0 +1,179 @@
+{% load static %}
+
+{% include "templateApp/header.html" %}
+
+<title>Test Your X-Rays - CovidSeek 2021</title>
+
+
+{% include "templateApp/header_files.html" %}
+
+{% if not result %}
+
+<body onload="DisclaimerModal()"></body>
+
+{% endif %}
+
+
+<!-- covid form start -->
+    <section class="covid-form">
+      <div class="container-fluid">
+
+        <div class="row">
+          <!-- Start Col -->
+          <div class="col-lg-6 col-md-12 pl-3 pt-15 rightblock">
+            <!-- <div class="business-item-info"> -->
+
+
+  
+
+              <div class="covid center">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="white">Upload Your X-Ray</h1>
+                  </div>
+                </div>
+                
+                <form action="" method="post" enctype="multipart/form-data" >
+                  <div class="row">
+                    <div class="col-md-12 center">
+                      <div class="btn-container">
+                        <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
+                        <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
+                        <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
+                        <p id="namefile">Only Format Allowed! (jpg,jpeg,png)</p>
+                        
+                       
+                        {%csrf_token%}
+                        {{form.as_p}}
+                        <button type="button" id="btnup" class="btn btn-primary btn-lg">Choose Xrays!</button>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  <div class="row">			
+                    <div class="col-md-12">
+                      <!--the defauld disabled btn and the actual one shown only if the three fields are valid-->
+                      <input type="submit" value="Check Status" class="btn btn-border page-scroll" id="submitbtn">
+                      <button type="button" class="btn btn-danger" disabled="disabled" id="fakebtn">Check Status <i class="fa fa-minus-circle"></i></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+          </div>
+
+          <div class="col-lg-6 col-md-12 pl-3 pt-15 rightblock">
+            <!-- <div class="business-item-info"> -->
+
+
+
+              <div class="covid center">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="white">Your Test Results</h1>
+                  </div>
+                </div>
+                
+                <form name="upload" method="post" action="#" enctype="multipart/form-data" accept-charset="utf-8">
+                  <div class="row">
+                    <div class="col-md-12 center">
+                      <div class="btn-container">
+                          
+                        {% if img_obj %}
+                        
+                        
+                        <img src="{{img_obj.photo.url}}" alt="uploaded-xrays" width="245" height="245" style="padding-top: 12px">
+                        {% else %}
+                        <img src="{% static '/img/covid-demo-xrays.jpg' %}" alt="uploaded-xrays" width="245" height="245" style="padding-top: 12px">
+                      
+                        
+                        {% endif %}
+
+                       
+                      </div>
+                    </div>
+                  </div>
+                    <!--additional fields-->
+                  <div class="row">			
+                    <div class="col-md-12">
+               
+                      {% if result %}
+                        
+                        
+                      <button class="btn btn-border" style="background-color: white;" disabled>{{result}}</button>
+                   
+                        {% else %}
+                        <button type="button" class="btn btn-danger" disabled="disabled" id="fakebtn">Result <i class="fa fa-minus-circle"></i></button>
+                 
+                        {% endif %}
+
+                    
+                      
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+          </div>
+          <!-- End Col -->
+
+
+          <!-- Start Col -->
+         
+
+
+
+
+        </div>
+      </div>
+    </section>
+
+<div>
+  <!-- Modal -->
+  <div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content disclaimer">
+        <div class="modal-header">
+          <h5 class="modal-title text-success"  id="disclaimerModalTitle">Disclaimer</h5>
+        </div>
+        <div class="modal-body">
+        Before You upload an image to <b>CovidSeek</b> make sure that the image full fill all the condtions describe below
+        <p>
+          1. Pictures should be the proper format we support jpg,jpeg,png 
+        </p>
+
+        <p>
+          2. Don't upload any other picture other than <b>Human Chest Xrays</b>.
+        </p>
+      
+        <p>
+          3. Do not upload any Copyrighted images
+        </p>
+
+        <p>
+          4. If you are not sure about whether the image you want to upload is allowed or not then do not upload that image. 
+  
+        </p>
+      
+        <p>
+          5 .All uploaded images are checked by our team members and images that violate terms will be removed without warning and uploader of such images might be banned from website.
+        </p>
+
+
+        <p>
+          6 . <input type="checkbox" name="" id="terms">  Accept <a href="#">Terms And Condtions</a> <span id="error" style="color: red;"></span>
+        </p>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success"  onclick="closeModal()">Agree</button>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+</div>
+
+
+{% include "templateApp/team.html" %}
+{% include "templateApp/footer.html" %}

@@ -1,0 +1,56 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<form name="" method="post" action="" onSubmit="getPath();">
+  <input type="file" name="file1">
+  <input type="submit" value="Upload">
+
+</form>
+
+
+
+
+<button onclick="change('kanha', 'bar')"> test</button>
+<!-- <img src="" onclick="change(foo, bar)"> -->
+<div id="idImg">
+
+</div>
+{{chart1}}
+
+
+<script language="javascript" type="text/javascript">
+  function getPath() {
+       var inputName = document.getElementById('file1');
+       var imgPath;
+  
+       imgPath = inputName.value;
+       alert(imgPath);
+  }
+</script>
+
+
+
+
+
+
+
+<script>
+
+
+function change(foo, bar){
+
+
+$.ajax({
+    url: 'http://127.0.0.1:8000/ajaxtest/',
+    data : {
+        'foo': foo,
+        'bar': bar
+    },
+    success: function (data) {
+        $("#idImg").html(data);
+        // alert(data);
+    }
+});
+
+}
+</script>

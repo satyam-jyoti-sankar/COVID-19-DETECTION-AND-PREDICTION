@@ -1,0 +1,102 @@
+    {% load static %}
+    <!-- footer by kanha -->
+    <footer>
+      <section id="footer-Content" style="padding-top:30px;">
+        <div class="container">
+            <div class="row">
+
+              <div class="col-lg-3 col-md-6 col-sm-3 ">
+                
+                <div class="footer-logo">
+                <img src="{% static '/img/covidlogo.png' %}" alt="">
+                </div>
+              </div>
+            
+              <div class="col-lg-3 col-md-6 col-sm-3 ">
+                <div class="widget">
+                  <h3 class="block-title">Details</h3>
+                  <ul class="menu">
+                    <li><a href="/terms-and-conditions">- Terms & Conditions</a></li>
+                    <li><a href="/privacy-policy">- Privacy Policy</a></li>
+                    <li><a href="/contact">- Contact Us</a></li>
+                    <li><a href="/about">- About</a></li>
+                    <!-- <li><a href="/blog">- Blog</a></li> -->
+                
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="col-lg-3 col-md-6 col-sm-3 ">
+                <div class="widget">
+                  <h3 class="block-title">Category</h3>
+                  <ul class="menu">
+                    <li><a href="/predict_covid">- Covid Prediction</a></li>
+                    <li><a href="/test_covid">- X-Ray Detection</a></li>
+                    <li><a class="page-scroll" href="/world-data/#vaccinated_data">- Vaccinated Data</a></li>
+                    <li><a class="page-scroll" href="/world-data/#single_frame">- World Total Data</a></li>
+                    <li><a class="page-scroll" href="/world-data/#confirm_death">- Confirm & Death</a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-lg-3 col-md-6 col-sm-3 ">
+                <div class="widget">
+                  <h3 class="block-title">Subscribe Now</h3>
+                  <p>Subscribe Our Newsletter And Stay Updated With Daily Covid Cases And Many More. </p>
+                  <div class="subscribe-area">
+                    <form action="" method="post">
+                      {% csrf_token %} 
+                      <input type="email" class="form-control" name="email" id="mm" placeholder="Enter Email">
+        
+                      <button type="submit" id="kk" name="subscribeBtn"><i class="lni-chevron-right"></i></button>
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+        </div>
+
+<style>
+
+
+</style>
+        <!-- Copyright Start  -->
+        <div class="copyright" style="margin-top: 40px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="site-info text-center">
+                  <p>Design By <a href="https://kanhahelp.xyz" rel="nofollow">Kanha</a></p>
+                </div>              
+              </div>
+            </div>
+          </div>
+        </div>
+     
+      </section>
+    </footer>
+
+    <!--Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-chevron-up"></i>
+    </a> 
+
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div> -->
+    <script src="{% static '/js/jquery-min.js' %}"></script>
+    <script src="{% static '/js/popper.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/owl.carousel.js' %}"></script>      
+    <script src="{% static '/js/jquery.nav.js' %}"></script>    
+    <script src="{% static '/js/scrolling-nav.js' %}"></script>    
+    <script src="{% static '/js/jquery.easing.min.js' %}"></script>     
+    <script src="{% static '/js/nivo-lightbox.js' %}"></script>     
+    <script src="{% static '/js/jquery.magnific-popup.min.js' %}"></script>      
+    <script src="{% static '/js/main.js' %}"></script>
+  </body>
+</html>

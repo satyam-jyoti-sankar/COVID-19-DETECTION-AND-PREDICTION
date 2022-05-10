@@ -1,0 +1,303 @@
+{% load static %}
+{% include "templateApp/header.html" %}
+<title>Covid19 Predictionn - CovidSeek 2021</title>
+{% include "templateApp/header_files.html" %}
+
+  
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+               <!-- <img src="img/1.png" alt="">  -->
+               {% if chart1 %}
+                <img src="data:image/png;base64, {{chart1|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+              {% endif %}
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Distribution For Active Cases</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> .</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+
+        </div>
+      </div>
+    </section>
+
+    <!-- for 2nd graph -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+           
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Distribution For Closed Cases</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+               <!-- <img src="img/1.png" class="img-fluid" alt="">  -->
+               {% if chart2 %}
+               <img src="data:image/png;base64, {{chart2|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+             {% endif %}
+            </div>
+          </div>
+         
+         
+
+        </div>
+      </div>
+    </section>
+   
+
+    <!-- for 3rd graph -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+               <!-- <img src="img/3.png" class="img-fluid" alt=""> 
+               -->
+               {% if chart3 %}
+               <img src="data:image/png;base64, {{chart3|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+             {% endif %}
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Weekly Progress of different types of cases</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+
+        </div>
+      </div>
+    </section>
+   
+
+    <!-- for 4th graph -->  
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+           
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Daily increase Of Covid19</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+               <!-- <img src="img/4.png" class="img-fluid" alt=""> 
+               -->
+               {% if chart4 %}
+               <img src="data:image/png;base64, {{chart4|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+             {% endif %}
+            </div>
+          </div>
+         
+         
+
+        </div>
+      </div>
+    </section>
+   
+
+    <!-- for 5th graph -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+               <!-- <img src="img/5.png" class="img-fluid" alt="">  -->
+               {% if chart5 %}
+               <img src="data:image/png;base64, {{chart5|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+             {% endif %}
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Top 15 countries as per number of confirmed cases</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+
+        </div>
+      </div>
+    </section>
+   
+
+    <!-- for 6th graph -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+           
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Weekly Progress of different types of cases for india</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+              <!-- <img src="img/6.png" class="img-fluid" alt="">  -->
+              {% if chart6 %}
+                <img src="data:image/png;base64, {{chart6|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+              {% endif %}
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+   
+
+    <!-- for 7th graph -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+              {% if chart7 %}
+              <img src="data:image/png;base64, {{chart7|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+            {% endif %}
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Prediction Using Holt Prediction</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+
+        </div>
+      </div>
+    </section>
+   
+
+    <!-- for 8th graph -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+           
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Prediction Using Lineaer Regression</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+              {% if chart8 %}
+              <img src="data:image/png;base64, {{chart8|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+            {% endif %}
+            </div>
+          </div>
+         
+         
+
+        </div>
+      </div>
+    </section>
+
+    <!-- for 9th graph -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+           
+          <div class="col-lg-4 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Prediction Using SVM</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+
+              <!-- <a class="btn btn-common" href="#">download</a> -->
+            </div>
+          </div>
+         
+          
+          <div class="col-lg-8 col-md-12 pl-3 pt-70">
+            <div class="business-item-img">
+              <!-- <img src="img/business/business-img.png" class="img-fluid" alt=""> -->
+              {% if chart9 %}
+              <img src="data:image/png;base64, {{chart9|safe}} " alt="" class="img-fluid" height="600px" width="800px">
+
+            {% endif %}
+            </div>
+          </div>
+         
+         
+
+        </div>
+      </div>
+    </section>
+    
+    {% include "templateApp/team.html" %}
+
+    {% include "templateApp/footer.html" %}

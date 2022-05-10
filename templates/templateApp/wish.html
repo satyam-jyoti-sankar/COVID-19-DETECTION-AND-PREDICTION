@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template For Django</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+   <h1>This Is Only For Testing</h1> 
+
+   <!-- Time is : {{chart}} -->
+<br>
+
+{% if chart2 %}
+<img src="data:image/png;base64, {{chart2|safe}} " alt="" height="600px" width="800px">
+
+{% endif %}
+
+   <!-- My Name Is = ' -->
+   
+   <!-- {{STATIC_URL}}\templateApp\covidlogo.png -->
+<!-- <h1 class="file">This is red</h1> -->
+
+ {{chart2}}
+<!-- <input type="file" name=" " id="image-selector">
+<button id="predict-button">prdict</button>
+<p>PREDECTION</p><span id="result"></span>
+<p>PROBABILITY</p><span id="probability"></span>
+<img src="" id="selected-image" alt=""> -->
+
+<!-- <img src="" onclick="change(foo, bar)"> -->
+<button onclick="change('foo', 'bar')">Click For Test</button>
+
+</body>
+<script>
+
+function change(foo, bar){
+   // alert("data fetched");
+   $.ajax({
+      url: 'image_upload/',
+      data : {
+         'foo': foo,
+         'bar': bar
+      },
+      success: function (data) {
+         // $("#idImg").html(data);
+         alert("data fetched");
+      }
+   });
+}
+</script>
+
+
+
+<script>
+//    let base64Image;
+//    $("#image_selector").change(function() {
+//       let reader = new Filereader();
+//       reader.onload = function(e) {
+//          let dataURL = reader.result;
+//          $('#selected_image').attr("src",dataURL);
+//          base64Image= dataURL.replace(/^data:image\/(png|jpg|jpeg);base64,/,"");
+//          console.log(base64Image);
+//       }
+//       reader.readAsDataURL($("#image-selector")[0].files[0]);
+//       $("#result").text("");
+//       $("#probability").text("");
+
+//    });
+
+// $("#predict-button").click(function(){
+//    let message={
+//       image: base64Image
+//    }
+//    console.log(message);
+//    $.post("http://127.0.0.1:5000/my_covid_api_path",JSON,stringify(message), function(response){
+//       $("result").text(response.prediction.result);
+//       $("#probability").text(response.prediction.accuracy.toFised(2));
+//       console.log(response);
+//    });
+// });
+
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</html>
+
+
